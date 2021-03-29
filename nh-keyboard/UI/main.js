@@ -54,6 +54,11 @@ function SubmitData() {
                 _id: id,
                 input: data.value,
             });
+        } else {
+            returnData.push({
+                _id: id,
+                input: null,
+            });
         }
         $(Rows[id]).remove();
     }
