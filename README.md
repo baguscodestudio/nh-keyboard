@@ -4,7 +4,7 @@ Dynamic Keyboard Input NUI for FiveM
 # Information
 I created this resource because I couldn't find any good looking NUI resources to input text and have it return back for use, the menu is very dynamic and allows as many options as the screen allows, it's also Open source so feel free to pull request if you have any improvements.
 
-https://lithi.io/file/PpLF.png
+![ShowCase](https://lithi.io/file/PpLF.png)
 
 
 # Setup
