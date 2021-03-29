@@ -26,14 +26,9 @@ function KeyboardInput(data)
     await = true
     while await do Wait(0) end
     if success ~= nil and next(success) ~= nil then
-        if #success == 1 then
-            return success[1].input
-        else
-            return success
-        end
-    else
-        return nil
+        return success
     end
+    return nil
 end
 
 exports("KeyboardInput", KeyboardInput)
