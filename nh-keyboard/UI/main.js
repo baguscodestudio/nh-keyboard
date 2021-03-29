@@ -49,10 +49,12 @@ function SubmitData() {
     for (var i = 0; i < RowsData.length; i++) {
         var id = RowsData[i].id
         var data = document.getElementById(id)
-        returnData.push({
-            _id: id,
-            input: data.value,
-        });
+        if (data.value) {
+            returnData.push({
+                _id: id,
+                input: data.value,
+            });
+        }
         $(Rows[id]).remove();
     }
     PostData({
@@ -90,7 +92,7 @@ window.addEventListener("message", (evt) => {
 })
 
 
-document.onkeydown = function (event) {
+document.onkeyup = function (event) {
     event = event || window.event;
     var charCode = event.keyCode || event.which;
     if (charCode == 27) {

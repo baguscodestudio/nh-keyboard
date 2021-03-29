@@ -17,6 +17,7 @@ end)
 
 function KeyboardInput(data)
     if not data then return end
+    Wait(250)
     success = {}
     SetNuiFocus(true, true)
     SendNUIMessage({
