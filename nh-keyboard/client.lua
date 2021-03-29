@@ -1,4 +1,5 @@
 local success = {}
+local await = false
 RegisterNUICallback("dataPost", function(data, cb)
     SetNuiFocus(false)
     success = data.data
@@ -16,7 +17,7 @@ end)
 
 
 function KeyboardInput(data)
-    if not data then return end
+    if not data or await then return end
     Wait(250)
     success = {}
     SetNuiFocus(true, true)
