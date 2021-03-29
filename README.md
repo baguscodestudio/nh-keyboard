@@ -29,7 +29,8 @@ local keyboard = exports["nh-keyboard"]:KeyboardInput({
     }
 })
 if keyboard ~= nil then
-    TriggerEvent('additem', keyboard)
+    if keyboard[1].input == nil then return end
+    TriggerEvent('additem', keyboard[1].input)
 end
 ```
 You can also add multiple listing and it would look something like this
