@@ -93,7 +93,7 @@ window.addEventListener("message", (evt) => {
 })
 
 
-document.onkeyup = function (event) {
+document.onkeydown = function (event) {
     event = event || window.event;
     var charCode = event.keyCode || event.which;
     if (charCode == 27) {
