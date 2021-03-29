@@ -4,6 +4,8 @@ Dynamic Keyboard Input NUI for FiveM
 # Information
 I created this resource because I couldn't find any good looking NUI resources to input text and have it return back for use, the menu is very dynamic and allows as many options as the screen allows, it's also Open source so feel free to pull request if you have any improvements.
 
+https://lithi.io/file/PpLF.png
+
 
 # Setup
 It's pretty simple, once you drop the nh-keyboard resource into your resources folder just make sure you put
@@ -43,17 +45,18 @@ local keyboard = exports["nh-keyboard"]:KeyboardInput({
         }
     }
 })
-```
+
 if keyboard ~= nil then
     if keyboard[1].input == nil or keyboard[2].input == nil then return end
     TriggerEvent('additem', keyboard[1].input, keyboard[2].input)
 end
+```
 
 # Known Bugs
 No known bugs
 
 # Support
-Any issues feel free to contact me on the fivem forums -NeroHiro or on discord NeroHiro#0001
+Any issues feel free to contact me on the [FiveM Forums](https://forum.cfx.re/u/nerohiro/summary) or on discord `NeroHiro#0001`
 
 or feel free to report any issues you have in the GitHub [Issues](https://github.com/nerohiro/nh-keyboard/issues)
 
