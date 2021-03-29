@@ -49,13 +49,10 @@ function SubmitData() {
     for (var i = 0; i < RowsData.length; i++) {
         var id = RowsData[i].id
         var data = document.getElementById(id)
-
-        if (data.value) {
-            returnData.push({
-                _id: id,
-                input: data.value,
-            });
-        }
+        returnData.push({
+            _id: id,
+            input: data.value,
+        });
         $(Rows[id]).remove();
     }
     PostData({
