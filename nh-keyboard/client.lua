@@ -9,8 +9,6 @@ end)
 
 RegisterNUICallback("cancel", function()
     SetNuiFocus(false)
-    SetNuiFocusKeepInput(false)
-    TriggerEvent('vt_core:NUI:controls', false)
     success = nil
     await = false
 end)
