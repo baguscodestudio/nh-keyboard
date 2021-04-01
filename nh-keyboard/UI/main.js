@@ -36,7 +36,9 @@ function AddRow(data) {
         $('.body').append(element);
         Rows[id] = element
     }
-    document.getElementById(0).focus();
+    setTimeout(() => {
+        document.getElementById(0).focus();
+    }, 333);
 }
 
 $(`#submit`).click(() => {
