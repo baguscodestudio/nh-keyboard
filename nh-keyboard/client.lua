@@ -15,6 +15,7 @@ end)
 
 
 function KeyboardInput(data)
+    Wait(250)
     if not data or await then return end
     success = {}
     SetNuiFocus(true, true)
