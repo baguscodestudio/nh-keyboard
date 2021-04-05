@@ -38,7 +38,7 @@ function AddRow(data) {
     }
     setTimeout(() => {
         document.getElementById(0).focus();
-    }, 333);
+    }, 100);
 }
 
 $(`#submit`).click(() => {
