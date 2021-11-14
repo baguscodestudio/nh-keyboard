@@ -3,10 +3,10 @@ let Rows = [];
 let savedHeader = "";
 
 const OpenKeyboard = (data) => {
-    SetHeader(data.header ? data.header : "")
-    AddRow(data.rows)
     $(`.main-wrapper`).fadeIn(0)
     $(`.background`).fadeIn(0)
+    SetHeader(data.header ? data.header : "")
+    AddRow(data.rows)
 }
 
 const SetHeader = (header) => {
@@ -54,12 +54,12 @@ const SubmitData = () => {
         }
         $(Rows[i]).remove();
     }
-    $.post(`https://rz-keyboard/dataPost`, JSON.stringify({ data: returnData }))
+    $.post(`https://nh-keyboard/dataPost`, JSON.stringify({data: returnData}))
 }
 
 
 const PostData = (data) => {
-    return $.post(`https://rz-keyboard/dataPost`, JSON.stringify(data))
+    return $.post(`https://nh-keyboard/dataPost`, JSON.stringify(data))
 }
 
 const CancelKeyboard = () => {
