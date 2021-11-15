@@ -66,7 +66,7 @@ const CancelKeyboard = () => {
     for (let i = 0; i < RowsData.length; i++) {
         $(Rows[i]).remove();
     }
-    $.post(`https://rz-keyboard/cancel`)
+    $.post(`https://nh-keyboard/cancel`)
 }
 
 window.addEventListener("message", (evt) => {
