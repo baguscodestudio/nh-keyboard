@@ -85,7 +85,7 @@ window.addEventListener("message", (evt) => {
     }
 })
 
-window.addEventListener("keyup", (ev) => {
+window.addEventListener("keydown", (ev) => {
     if (ev.which == 27) {
         CancelKeyboard();
     } else if (ev.which == 13) {
