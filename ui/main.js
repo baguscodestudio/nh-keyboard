@@ -1,16 +1,12 @@
 let RowsData = [];
 let Rows = [];
 let savedHeader = "";
-let canSubmit = false
 
 const OpenKeyboard = (data) => {
     $(`.main-wrapper`).fadeIn(0)
     $(`.background`).fadeIn(0)
     SetHeader(data.header ? data.header : "")
     AddRow(data.rows)
-    setTimeout(() => {
-		canSubmit = true;
-	}, 500);
 }
 
 const SetHeader = (header) => {
@@ -26,7 +22,6 @@ const CloseKeyboard = () => {
     RowsData = [];
     Rows = [];
     savedHeader = "";
-    canSubmit = false
 };
 
 const AddRow = (data) => {
@@ -72,7 +67,6 @@ const CancelKeyboard = () => {
         $(Rows[i]).remove();
     }
     $.post(`https://nh-keyboard/cancel`)
-    canSubmit = false
 }
 
 window.addEventListener("message", (evt) => {
@@ -95,9 +89,7 @@ window.addEventListener("keyup", (ev) => {
     if (ev.which == 27) {
         CancelKeyboard();
     } else if (ev.which == 13) {
-        if(canSubmit){
-            SubmitData()
-        }
+        SubmitData()
     }
 })
 
